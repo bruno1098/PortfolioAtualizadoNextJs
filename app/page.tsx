@@ -5,6 +5,8 @@ import { motion, useScroll, useTransform } from "framer-motion";
 import { Github, Linkedin, Mail, ExternalLink, Code2, Database, Globe, Palette, Server, Terminal, User } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
+import Background3D from "@/components/Background3D";
+import Scene3D from "@/components/Scene3D";
 
 interface Repository {
   name: string;
@@ -91,7 +93,8 @@ export default function Home() {
   }, []);
 
   return (
-    <main className="bg-gradient-to-br from-background to-muted overflow-x-hidden">
+    <main className="bg-gradient-to-br from-background/80 to-muted/80 overflow-x-hidden">
+      <Background3D />
       {/* Hero Section */}
       <section className="min-h-screen container mx-auto px-4 py-8 md:py-20">
         <div className="grid lg:grid-cols-2 gap-28 lg:gap-22 items-center">
@@ -250,6 +253,7 @@ function createAwesomeStuff() {
             </motion.div>
           </motion.div>
         </div>
+        <Scene3D />
       </section>
 
       {/* About & Skills Section */}
