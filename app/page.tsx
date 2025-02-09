@@ -7,6 +7,7 @@ import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import Background3D from "@/components/Background3D";
 import Scene3D from "@/components/Scene3D";
+import CertificateScene3D from "@/components/CertificateScene3D";
 
 interface Repository {
   name: string;
@@ -334,8 +335,169 @@ function createAwesomeStuff() {
         </motion.div>
       </section>
 
+      {/* Certifications Section */}
+      <section className="py-12 sm:py-16 md:py-20 relative overflow-hidden">
+        <CertificateScene3D />
+        <motion.div 
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          viewport={{ once: true }}
+          className="container mx-auto px-4 relative z-10"
+        >
+          <motion.h2
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }}
+            viewport={{ once: true }}
+            className="text-2xl sm:text-3xl md:text-4xl font-bold mb-8 sm:mb-12 text-center"
+          >
+            Certificações
+          </motion.h2>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
+            {[
+              {
+                title: "Estatísticas para Soluções em TI",
+                issuer: "FIAP",
+                date: "Outubro de 2024",
+                credential: "2b8bb39d8c600901a11a6edd5e855ee4",
+                url: "https://on.fiap.com.br/pluginfile.php/1/local_nanocourses/certificado_nanocourse/126704/2b8bb39d8c600901a11a6edd5e855ee4/certificado.png",
+                logo: "https://media.licdn.com/dms/image/v2/C4D0BAQFGUHRJ26bFDw/company-logo_100_100/company-logo_100_100/0/1631312349936?e=1747267200&v=beta&t=rS-t9CbJzndwyX6b7R_lHe06r5Qo9ihIaorqUORtY8I"
+              },
+              {
+                title: "User Experience",
+                issuer: "FIAP",
+                date: "Outubro de 2024",
+                credential: "a38314f5c22fab912d3e953f7b5d6b96",
+                url: "https://on.fiap.com.br/pluginfile.php/1/local_nanocourses/certificado_nanocourse/126526/a38314f5c22fab912d3e953f7b5d6b96/certificado.png",
+                logo: "https://media.licdn.com/dms/image/v2/C4D0BAQFGUHRJ26bFDw/company-logo_100_100/company-logo_100_100/0/1631312349936?e=1747267200&v=beta&t=rS-t9CbJzndwyX6b7R_lHe06r5Qo9ihIaorqUORtY8I"
+              },
+              {
+                title: "React Native: Construindo um App com Native-base",
+                issuer: "Alura",
+                date: "Abril de 2024",
+                credential: "c08996e1-23b8-4678-b1fe-5c184c558ae8",
+                url: "https://cursos.alura.com.br/certificate/c08996e1-23b8-4678-b1fe-5c184c558ae8?lang",
+                logo: "https://media.licdn.com/dms/image/v2/D4D0BAQEZkMsv5FwbDA/company-logo_100_100/company-logo_100_100/0/1710187635900/aluracursos_logo?e=1747267200&v=beta&t=aFkqXu_dNXPktcRhqtZJuR3Ms3Gh2AtMGBONsZFc7tU"
+              },
+              {
+                title: "React Native: utilizando Web API",
+                issuer: "Alura",
+                date: "Abril de 2024",
+                credential: "6f4eae92-a420-48af-b86c-e5be5b1576e0",
+                url: "https://cursos.alura.com.br/certificate/6f4eae92-a420-48af-b86c-e5be5b1576e0?lang",
+                logo: "https://media.licdn.com/dms/image/v2/D4D0BAQEZkMsv5FwbDA/company-logo_100_100/company-logo_100_100/0/1710187635900/aluracursos_logo?e=1747267200&v=beta&t=aFkqXu_dNXPktcRhqtZJuR3Ms3Gh2AtMGBONsZFc7tU"
+              },
+              {
+                title: "Cloud Onboarding: Trabalhando com os principais provedores",
+                issuer: "Alura",
+                date: "Março de 2024",
+                credential: "95477fca-aedc-417f-a6bd-b1e14159d45f",
+                url: "https://cursos.alura.com.br/certificate/95477fca-aedc-417f-a6bd-b1e14159d45f?lang",
+                logo: "https://media.licdn.com/dms/image/v2/D4D0BAQEZkMsv5FwbDA/company-logo_100_100/company-logo_100_100/0/1710187635900/aluracursos_logo?e=1747267200&v=beta&t=aFkqXu_dNXPktcRhqtZJuR3Ms3Gh2AtMGBONsZFc7tU"
+              },
+              {
+                title: "JavaScript: Explorando a linguagem",
+                issuer: "Alura",
+                date: "Fevereiro de 2024",
+                credential: "932e5e98-6be6-4434-9b40-03384c9ce205",
+                url: "https://cursos.alura.com.br/certificate/932e5e98-6be6-4434-9b40-03384c9ce205?lang",
+                logo: "https://media.licdn.com/dms/image/v2/D4D0BAQEZkMsv5FwbDA/company-logo_100_100/company-logo_100_100/0/1710187635900/aluracursos_logo?e=1747267200&v=beta&t=aFkqXu_dNXPktcRhqtZJuR3Ms3Gh2AtMGBONsZFc7tU"
+              },
+              {
+                title: "Responsive Web Development",
+                issuer: "FIAP",
+                date: "Outubro de 2023",
+                credential: "ca2892eb7657969cc08ee29d6249783c",
+                url: "https://on.fiap.com.br/pluginfile.php/1/local_nanocourses/certificado_nanocourse/97119/ca2892eb7657969cc08ee29d6249783c/certificado.png",
+                logo: "https://media.licdn.com/dms/image/v2/C4D0BAQFGUHRJ26bFDw/company-logo_100_100/company-logo_100_100/0/1631312349936?e=1747267200&v=beta&t=rS-t9CbJzndwyX6b7R_lHe06r5Qo9ihIaorqUORtY8I"
+              },
+              {
+                title: "Certificado de Qualificação Profissional em Análise de Sistemas e Prototipação Web",
+                issuer: "FIAP",
+                date: "Julho de 2023",
+                credential: "Certificado de Qualificação",
+                url: "https://www2.fiap.com.br/updown/DocumentosAssinados/7966e27d-df12-4167-815a-2f6f22b3ab3b.pdf",
+                logo: "https://media.licdn.com/dms/image/v2/C4D0BAQFGUHRJ26bFDw/company-logo_100_100/company-logo_100_100/0/1631312349936?e=1747267200&v=beta&t=rS-t9CbJzndwyX6b7R_lHe06r5Qo9ihIaorqUORtY8I"
+              },
+              {
+                title: "Certificado de Qualificação Profissional em Desenvolvimento e Designer Web 2.0",
+                issuer: "FIAP",
+                date: "Dezembro de 2023",
+                credential: "Certificado de Qualificação",
+                url: "https://www2.fiap.com.br/updown/DocumentosAssinados/8d2a8b68-fb2f-491f-8dc3-6dd3985bf8ce.pdf",
+                logo: "https://media.licdn.com/dms/image/v2/C4D0BAQFGUHRJ26bFDw/company-logo_100_100/company-logo_100_100/0/1631312349936?e=1747267200&v=beta&t=rS-t9CbJzndwyX6b7R_lHe06r5Qo9ihIaorqUORtY8I"
+              }
+            ].map((cert, index) => (
+              <motion.div
+                key={cert.credential}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ delay: index * 0.1 }}
+                viewport={{ once: true }}
+                whileHover={{ scale: 1.05, rotateY: 10 }}
+                className="group"
+              >
+                <div className="relative h-full bg-gradient-to-br from-background/40 to-background/10 backdrop-blur-lg rounded-2xl p-6 border border-border/50 overflow-hidden transition-all duration-300 hover:shadow-2xl">
+                  <div className="absolute inset-0 bg-gradient-to-br from-primary/10 via-transparent to-primary/5 opacity-0 group-hover:opacity-100 transition-opacity" />
+                  
+                  <div className="relative z-10">
+                    <div className="flex items-center gap-4 mb-4">
+                      <div className="w-12 h-12 rounded-xl overflow-hidden flex-shrink-0 bg-primary/10 p-2">
+                        <img 
+                          src={cert.logo} 
+                          alt={`${cert.issuer} logo`}
+                          className="w-full h-full object-contain"
+                        />
+                      </div>
+                      <div>
+                        <h3 className="text-lg font-semibold line-clamp-2 group-hover:text-primary transition-colors">
+                          {cert.title}
+                        </h3>
+                        <p className="text-sm text-muted-foreground">{cert.issuer}</p>
+                      </div>
+                    </div>
+                    
+                    <div className="space-y-3">
+                      <p className="text-sm text-muted-foreground flex items-center gap-2">
+                        <span className="w-1.5 h-1.5 rounded-full bg-primary/60" />
+                        Emitido em: {cert.date}
+                      </p>
+                      {cert.credential && cert.credential !== "Certificado de Qualificação" && (
+                        <p className="text-xs text-muted-foreground/80 break-all">
+                          Credencial: {cert.credential}
+                        </p>
+                      )}
+                    </div>
+
+                    <motion.div 
+                      className="mt-4"
+                      whileHover={{ scale: 1.02 }}
+                      whileTap={{ scale: 0.98 }}
+                    >
+                      <Button className="w-full bg-gradient-to-r from-primary/80 to-primary hover:from-primary hover:to-primary/90" asChild>
+                        <a 
+                          href={cert.url} 
+                          target="_blank" 
+                          rel="noopener noreferrer"
+                          className="flex items-center justify-center gap-2"
+                        >
+                          <ExternalLink className="w-4 h-4" />
+                          Ver Certificado
+                        </a>
+                      </Button>
+                    </motion.div>
+                  </div>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </motion.div>
+      </section>
+
       {/* Projects Section */}
-      <section id="projects" className="py-12 sm:py-16 md:py-20">
+      <section id="projects" className="py-12 sm:py-16 md:py-20 bg-muted/50">
         <div className="container mx-auto px-4">
           <motion.h2
             initial={{ opacity: 0, y: 20 }}

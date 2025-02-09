@@ -27,7 +27,8 @@
     "**/*.ts",
     "**/*.tsx",
     ".next/types/**/*.ts",
-    "node_modules/three/examples/jsm/controls/OrbitControls.js"
+    "node_modules/three/examples/jsm/controls/OrbitControls.js",
+    "node_modules/@types/three/examples/jsm/controls/OrbitControls"
   ],
   "exclude": ["node_modules"]
 }
